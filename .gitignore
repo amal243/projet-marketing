@@ -1,0 +1,19 @@
+# === Visual Studio (.NET) ===
+gestion-marketing/bin/
+gestion-marketing/obj/
+gestion-marketing/.vs/
+
+# === Node / Angular ===
+frontend-marketing/node_modules/
+frontend-marketing/dist/
+
+# === Logs ===
+*.log
+
+# === Configurations locales ===
+.env
+.vscode/
+
+# === Sauvegardes / temporaires ===
+*.tmp
+*.bak
