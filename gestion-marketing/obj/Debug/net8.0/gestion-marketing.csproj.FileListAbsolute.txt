@@ -284,3 +284,4 @@ C:\Users\Amen Services\Documents\projet-marketing\gestion-marketing\obj\Debug\ne
 C:\Users\Amen Services\Documents\projet-marketing\gestion-marketing\obj\Debug\net8.0\gestion-marketing.pdb
 C:\Users\Amen Services\Documents\projet-marketing\gestion-marketing\obj\Debug\net8.0\gestion-marketing.genruntimeconfig.cache
 C:\Users\Amen Services\Documents\projet-marketing\gestion-marketing\obj\Debug\net8.0\ref\gestion-marketing.dll
+C:\Users\Amen Services\documents\projet-marketing\gestion-marketing\obj\Debug\net8.0\gestion-marketing.sourcelink.json

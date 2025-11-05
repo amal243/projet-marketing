@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Amen Services\\documents\\projet-marketing\\gestion-marketing\\gestion-marketing.csproj": {}
+    "C:\\Users\\Amen Services\\Documents\\projet-marketing\\gestion-marketing\\gestion-marketing.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Amen Services\\documents\\projet-marketing\\gestion-marketing\\gestion-marketing.csproj": {
+    "C:\\Users\\Amen Services\\Documents\\projet-marketing\\gestion-marketing\\gestion-marketing.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Amen Services\\documents\\projet-marketing\\gestion-marketing\\gestion-marketing.csproj",
+        "projectUniqueName": "C:\\Users\\Amen Services\\Documents\\projet-marketing\\gestion-marketing\\gestion-marketing.csproj",
         "projectName": "gestion-marketing",
-        "projectPath": "C:\\Users\\Amen Services\\documents\\projet-marketing\\gestion-marketing\\gestion-marketing.csproj",
+        "projectPath": "C:\\Users\\Amen Services\\Documents\\projet-marketing\\gestion-marketing\\gestion-marketing.csproj",
         "packagesPath": "C:\\Users\\Amen Services\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Amen Services\\documents\\projet-marketing\\gestion-marketing\\obj\\",
+        "outputPath": "C:\\Users\\Amen Services\\Documents\\projet-marketing\\gestion-marketing\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

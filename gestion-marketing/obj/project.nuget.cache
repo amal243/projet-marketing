@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "C2r6UzC8F8k=",
+  "dgSpecHash": "a9zJXo4ztKk=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Amen Services\\documents\\projet-marketing\\gestion-marketing\\gestion-marketing.csproj",
+  "projectFilePath": "C:\\Users\\Amen Services\\Documents\\projet-marketing\\gestion-marketing\\gestion-marketing.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Amen Services\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\Amen Services\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",

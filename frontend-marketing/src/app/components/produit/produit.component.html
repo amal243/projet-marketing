@@ -1,0 +1,24 @@
+<h2>Produits</h2>
+
+<div class="form">
+  <input type="text" placeholder="Nom du produit" [(ngModel)]="nouveauProduit.nom">
+  <input type="number" placeholder="Prix" [(ngModel)]="nouveauProduit.prix">
+  <button (click)="ajouterProduit()">Ajouter</button>
+</div>
+
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Nom</th>
+      <th>Prix (€)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let p of produits">
+      <td>{{ p.id }}</td>
+      <td>{{ p.nom }}</td>
+      <td>{{ p.prix }}</td>
+    </tr>
+  </tbody>
+</table>
