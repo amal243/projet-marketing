@@ -4,20 +4,11 @@ import { Observable } from 'rxjs';
 
 @Injectable({ providedIn: 'root' })
 export class ClientService {
-
-  private apiUrl = 'http://localhost:5137/api/clients';
-
+  private base = 'http://localhost:5137/api/clients';
   constructor(private http: HttpClient) {}
-
-  getClients(): Observable<any> {
-    return this.http.get(this.apiUrl);
-  }
-
-  createClient(client: any): Observable<any> {
-    return this.http.post(this.apiUrl, client);
-  }
-
-  deleteClient(id: number): Observable<any> {
-    return this.http.delete(`${this.apiUrl}/${id}`);
-  }
+  getClients(): Observable<any[]> { return this.http.get<any[]>(this.base); }
+  getClient(id:number){ return this.http.get<any>(`${this.base}/${id}`); }
+  createClient(payload:any){ return this.http.post(this.base, payload); }
+  updateClient(id:number,payload:any){ return this.http.put(`${this.base}/${id}`, payload); }
+  deleteClient(id:number){ return this.http.delete(`${this.base}/${id}`); }
 }

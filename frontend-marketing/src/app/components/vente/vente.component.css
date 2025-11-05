@@ -1,0 +1,7 @@
+/* reuse styles (table/form) */
+.form-row{ display:flex; gap:8px; margin-bottom:12px; }
+input{ padding:8px; }
+button{ padding:8px 12px; background:var(--accent); color:white; border-radius:6px; border:none; }
+table{ width:100%; border-collapse:collapse; }
+th{ background:var(--primary-color); color:white; padding:8px; }
+td{ border:1px solid #eee; padding:8px; }

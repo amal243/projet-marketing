@@ -1,27 +1,18 @@
-<h2>Ventes</h2>
+<div class="card">
+  <h3 class="section-title">Ventes</h3>
+  <div class="form-row">
+    <input placeholder="Produit" [(ngModel)]="nouveau.produit">
+    <input placeholder="Client" [(ngModel)]="nouveau.client">
+    <input type="number" placeholder="Montant" [(ngModel)]="nouveau.montant">
+    <button (click)="add()">Enregistrer</button>
+  </div>
 
-<div class="form">
-  <input type="text" placeholder="Produit" [(ngModel)]="nouvelleVente.produit">
-  <input type="text" placeholder="Client" [(ngModel)]="nouvelleVente.client">
-  <input type="number" placeholder="Montant (€)" [(ngModel)]="nouvelleVente.montant">
-  <button (click)="ajouterVente()">Ajouter</button>
+  <table>
+    <thead><tr><th>ID</th><th>Produit</th><th>Client</th><th>Montant</th></tr></thead>
+    <tbody>
+      <tr *ngFor="let v of ventes">
+        <td>{{v.id}}</td><td>{{v.produit}}</td><td>{{v.client}}</td><td>{{v.montant}}</td>
+      </tr>
+    </tbody>
+  </table>
 </div>
-
-<table>
-  <thead>
-    <tr>
-      <th>ID</th>
-      <th>Produit</th>
-      <th>Client</th>
-      <th>Montant (€)</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let v of ventes">
-      <td>{{ v.id }}</td>
-      <td>{{ v.produit }}</td>
-      <td>{{ v.client }}</td>
-      <td>{{ v.montant }}</td>
-    </tr>
-  </tbody>
-</table>

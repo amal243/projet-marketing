@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("gestion-marketing")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+05a20185bb2dff5211453e11f29af28e45386437")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1a1b80f0f575be4b0503969694e9fbecd96c12ae")]
 [assembly: System.Reflection.AssemblyProductAttribute("gestion-marketing")]
 [assembly: System.Reflection.AssemblyTitleAttribute("gestion-marketing")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

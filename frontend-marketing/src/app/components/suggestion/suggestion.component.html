@@ -1,0 +1,12 @@
+<div class="card">
+  <h3 class="section-title">Suggestions</h3>
+  <div class="form-row">
+    <input placeholder="Suggestion" [(ngModel)]="nouveau.texte">
+    <input placeholder="Type" [(ngModel)]="nouveau.type">
+    <button (click)="add()">Envoyer</button>
+  </div>
+
+  <ul>
+    <li *ngFor="let s of suggestions">{{ s.texte }} — <em>{{ s.type }}</em></li>
+  </ul>
+</div>

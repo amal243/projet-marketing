@@ -1,0 +1,17 @@
+<div class="card">
+  <h3 class="section-title">Utilisateurs</h3>
+  <div class="form-row">
+    <input placeholder="Nom" [(ngModel)]="nouveau.nom">
+    <input placeholder="Email" [(ngModel)]="nouveau.email">
+    <select [(ngModel)]="nouveau.role">
+      <option value="responsable">Responsable</option>
+      <option value="analyste">Analyste</option>
+      <option value="admin">Admin</option>
+    </select>
+    <button (click)="add()">Ajouter</button>
+  </div>
+
+  <ul>
+    <li *ngFor="let u of utilisateurs">{{ u.nom }} — {{ u.email }} — {{ u.role }}</li>
+  </ul>
+</div>

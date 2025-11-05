@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { VenteService } from '../../services/vente.service';
 
 @Component({
   selector: 'app-vente',
@@ -10,22 +11,10 @@ import { FormsModule } from '@angular/forms';
   styleUrls: ['./vente.component.css']
 })
 export class VenteComponent {
-  ventes = [
-    { id: 1, produit: 'Ordinateur', client: 'Amal', montant: 1200 },
-    { id: 2, produit: 'Téléphone', client: 'Wièm', montant: 800 },
-  ];
+  ventes: any[] = [];
+  nouveau = { produit:'', client:'', montant:0 };
 
-  nouvelleVente = { produit: '', client: '', montant: 0 };
-
-  ajouterVente() {
-    if (this.nouvelleVente.produit.trim() && this.nouvelleVente.client.trim()) {
-      this.ventes.push({
-        id: this.ventes.length + 1,
-        produit: this.nouvelleVente.produit,
-        client: this.nouvelleVente.client,
-        montant: this.nouvelleVente.montant
-      });
-      this.nouvelleVente = { produit: '', client: '', montant: 0 };
-    }
-  }
+  constructor(private s: VenteService){ this.load(); }
+  load(){ this.s.getVentes().subscribe(d=>this.ventes=d, e=>console.error(e)); }
+  add(){ this.s.createVente(this.nouveau).subscribe(()=>this.load()); this.nouveau={produit:'',client:'',montant:0}; }
 }

@@ -1,0 +1,16 @@
+<h1>📊 Gestion des Campagnes</h1>
+
+<div class="formulaire">
+  <input placeholder="Nom" [(ngModel)]="nouveau.nom">
+  <input placeholder="Description" [(ngModel)]="nouveau.description">
+  <input type="date" [(ngModel)]="nouveau.dateDebut">
+  <input type="date" [(ngModel)]="nouveau.dateFin">
+  <input type="number" placeholder="Budget" [(ngModel)]="nouveau.budget">
+  <button (click)="add()">Créer</button>
+</div>
+
+<ul>
+  <li *ngFor="let c of campagnes">
+    <strong>{{ c.nom }}</strong> — {{ c.description }} ({{ c.dateDebut }} → {{ c.dateFin }}) — 💰 {{ c.budget }} €
+  </li>
+</ul>

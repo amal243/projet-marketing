@@ -1,9 +1,20 @@
-<!-- src/app/app.html -->
-<h1 style="text-align:center; color:#007bff;">Bienvenue sur le projet marketing 💼</h1>
-<nav style="text-align:center; margin-bottom:20px;">
-  <a routerLink="/client">Clients</a> |
-  <a routerLink="/produit">Produits</a> |
-  <a routerLink="/vente">Ventes</a>
-</nav>
+<header class="navbar">
+  <div class="logo">Marketing Manager Pro</div>
+  <nav>
+    <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Campagnes</a>
+    <a routerLink="/clients" routerLinkActive="active">Clients</a>
+    <a routerLink="/produits" routerLinkActive="active">Produits</a>
+    <a routerLink="/ventes" routerLinkActive="active">Ventes</a>
+    <a routerLink="/suggestions" routerLinkActive="active">Suggestions</a>
+    <a routerLink="/utilisateurs" routerLinkActive="active">Utilisateurs</a>
+    <a routerLink="/dashboard" routerLinkActive="active">Dashboard</a>
+  </nav>
+</header>
 
-<router-outlet></router-outlet>
+<main class="content">
+  <router-outlet></router-outlet>
+</main>
+
+<footer class="footer">
+  <p>© 2025 Marketing Manager Pro — Tous droits réservés</p>
+</footer>

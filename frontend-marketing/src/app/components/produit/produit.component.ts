@@ -1,30 +1,24 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { ProduitService } from '../../services/produit.service';
 
 @Component({
   selector: 'app-produit',
   standalone: true,
   imports: [CommonModule, FormsModule],
-  templateUrl: './produit.component.html', 
+  templateUrl: './produit.component.html',
   styleUrls: ['./produit.component.css']
 })
 export class ProduitComponent {
-  produits = [
-    { id: 1, nom: 'Ordinateur', prix: 1200 },
-    { id: 2, nom: 'Téléphone', prix: 800 },
-  ];
+  produits: any[] = [];
+  nouveau = { nom:'', prix:0 };
 
-  nouveauProduit = { nom: '', prix: 0 };
-
-  ajouterProduit() {
-    if (this.nouveauProduit.nom.trim()) {
-      this.produits.push({
-        id: this.produits.length + 1,
-        nom: this.nouveauProduit.nom,
-        prix: this.nouveauProduit.prix
-      });
-      this.nouveauProduit = { nom: '', prix: 0 };
-    }
+  constructor(private service: ProduitService){
+    this.load();
   }
+
+  load(){ this.service.getProduits().subscribe(d=>this.produits = d, e=>console.error(e)); }
+  add(){ this.service.createProduit(this.nouveau).subscribe(()=>this.load()); this.nouveau={nom:'',prix:0}; }
+  remove(id:number){ this.service.deleteProduit(id).subscribe(()=>this.load()); }
 }

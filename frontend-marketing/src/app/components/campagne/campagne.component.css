@@ -1,0 +1,26 @@
+h1 {
+  text-align: center;
+  color: white;
+  background-color: #002b5c;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.formulaire {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px;
+}
+
+input, button {
+  padding: 10px;
+  border-radius: 5px;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}

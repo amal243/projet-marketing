@@ -12,46 +12,26 @@ import { ClientService } from '../../services/client.service';
 })
 export class ClientComponent implements OnInit {
   clients: any[] = [];
-  model: any = {};
+  nouveau = { nom:'', email:'', telephone:'' };
   loading = false;
   error = '';
 
-  constructor(private clientService: ClientService) {}
+  constructor(private service: ClientService){}
 
-  ngOnInit() {
-    this.loadClients();
-  }
+  ngOnInit(){ this.load(); }
 
-  loadClients() {
+  load(){
     this.loading = true;
-    this.clientService.getClients().subscribe({
-      next: data => {
-        this.clients = data;
-        this.loading = false;
-      },
-      error: () => {
-        this.error = 'Erreur de chargement des clients';
-        this.loading = false;
-      }
+    this.service.getClients().subscribe({
+      next: data=>{ this.clients = data; this.loading=false; },
+      error: err=>{ this.error='Erreur'; console.error(err); this.loading=false; }
     });
   }
 
-  create(f: any) {
-    if (f.valid) {
-      this.clientService.createClient(this.model).subscribe({
-        next: () => {
-          this.loadClients();
-          f.resetForm();
-        },
-        error: () => this.error = 'Erreur lors de la création du client'
-      });
-    }
+  add(){
+    this.service.createClient(this.nouveau).subscribe(()=> this.load(), err=>console.error(err));
+    this.nouveau = { nom:'', email:'', telephone:'' };
   }
 
-  delete(id: number) {
-    this.clientService.deleteClient(id).subscribe({
-      next: () => this.loadClients(),
-      error: () => this.error = 'Erreur lors de la suppression'
-    });
-  }
+  remove(id:number){ this.service.deleteClient(id).subscribe(()=> this.load()); }
 }
